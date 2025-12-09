@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAAD</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* الخطوط والخلفية العامة */
+body {
+  font-family: 'Tahoma', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+/* العنوان */
+h2 {
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left;
+  color: #333;
+}
+
+/* البطاقات */
+.product-card {
+  height: 420px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* الصور داخل البطاقة */
+.product-card img {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* النصوص داخل البطاقة */
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.price {
+  font-size: 1.1rem;
+  color: #f27a1a;   /* برتقالي مثل Trendyol */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.rating {
+  font-size: 0.9rem;
+  color: #f1c40f;   /* أصفر للتقييم */
+  margin-bottom: 8px;
+}
+
+/* البادجات (Kargo Bedava, İndirim, En Çok Satan) */
+.badge {
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+/* ألوان البادجات */
+.bg-success {
+  background-color: #28a745 !important; /* أخضر */
+}
+
+.bg-danger {
+  background-color: #dc3545 !important; /* أحمر */
+}
+
+.bg-warning {
+  background-color: #ffc107 !important; /* أصفر */
+}
+
+.bg-info {
+  background-color: #17a2b8 !important; /* أزرق فاتح */
+}
+
+.bg-primary {
+  background-color: #007bff !important; /* أزرق */
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+}
+  </style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-warning" href="#">Saadzone</a>
+    <form class="d-flex ms-auto">
+      <input class="form-control me-2" type="Ara" placeholder="Ürün ara..." aria-label="Ara">
+      <button class="btn btn-outline-warning" type="submit">Ara</button>
+    </form>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Kategoriler -->
+<div class="bg-white border-bottom py-2">
+  <div class="container d-flex justify-content-around">
+    <a href="#" class="text-dark fw-bold">Kadın</a>
+    <a href="#" class="text-dark fw-bold">Erkek</a>
+    <a href="#" class="text-dark fw-bold">Anne & Çocuk</a>
+    <a href="#" class="text-dark fw-bold">Kampanyalar</a>
+  </div>
+</div>
+
+<!-- Popüler Ürünler -->
+<div class="container my-5">
+  <h2 class="mb-4">Popüler Ürünler</h2>
+  <div class="row">
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row">
+    <!-- Ürün 1 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Eşofman Takımı.webp" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Eşofman Takımı</h6>
+          <p class="price">479,00 TL</p>
+          <p class="rating">★★★★☆ (5)</p>
+          <span class="badge bg-success">Kargo Bedava</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün 2 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Uzun Şişme Mont.webp" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Uzun Şişme Mont</h6>
+          <p class="price">1.405,31 TL</p>
+          <p class="rating">★★★★☆ (59)</p>
+          <span class="badge bg-danger">Sepette %10 İndirim</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün 3 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Detox Şurubu.jpg" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Detox Şurubu</h6>
+          <p class="price">329,90 TL</p>
+          <p class="rating">★★★★☆ (100k)</p>
+          <span class="badge bg-warning text-dark">En Çok Satan</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün 4 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Kürklü Mont.jpeg" class=" alt="Ürün>
+        <div class="card-body">
+          <h6 class="card-title">Kürklü Mont</h6>
+          <p class="price">1.057,42 TL</p>
+          <p class="rating">★★★★☆ (138)</p>
+          <span class="badge bg-info text-dark">Favori: 4k kişi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün 5 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Triko Takım.jpeg" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Triko Takım</h6>
+          <p class="price">569,05 TL</p>
+          <p class="rating">★★★★☆ (105)</p>
+          <span class="badge bg-primary">Trendyol Plus</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün 6 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Ananas Detox.webp" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Ananas Detox</h6>
+          <p class="price">329,90 TL</p>
+          <p class="rating">★★★★☆ (1M)</p>
+          <span class="badge bg-success">Kargo Bedava</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün 7 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Sneaker Ayakkabı.jpeg" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Sneaker Ayakkabı</h6>
+          <p class="price">799,00 TL</p>
+          <p class="rating">★★★★☆ (250)</p>
+          <span class="badge bg-success">Kargo Bedava</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün 8 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Çanta.webp" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Çanta</h6>
+          <p class="price">299,00 TL</p>
+          <p class="rating">★★★★☆ (90)</p>
+          <span class="badge bg-info">Favori: 500 kişi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün 9 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Saat.webp" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Saat</h6>
+          <p class="price">1.200,00 TL</p>
+          <p class="rating">★★★★☆ (120)</p>
+          <span class="badge bg-danger">Sepette %5 İndirim</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün 10 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Laptop Çantası.jpg" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Laptop Çantası</h6>
+          <p class="price">450,00 TL</p>
+          <p class="rating">★★★★☆ (60)</p>
+          <span class="badge bg-success">Kargo Bedava</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün 11 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Kulaklık.jpg" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Kulaklık</h6>
+          <p class="price">199,00 TL</p>
+          <p class="rating">★★★★☆ (500)</p>
+          <span class="badge bg-warning text-dark">En Çok Satan</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün 12 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Tişört.webp" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Tişört</h6>
+          <p class="price">99,00 TL</p>
+          <p class="rating">★★★★☆ (300)</p>
+          <span class="badge bg-info">Favori: 2k kişi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün 13 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Pantolon.jpg" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Pantolon</h6>
+          <p class="price">249,00 TL</p>
+          <p class="rating">★★★★☆ (150)</p>
+          <span class="badge bg-success">Kargo Bedava</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ürün 14 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Gömlek.webp" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Gömlek</h6>
+          <p class="price">199,00 TL</p>
+          <p class="rating">★★★★☆ (80)</p>
+          <span class="badge bg-danger">Sepette %15 İndirim</span>
+        </div>
+      </div>
+    </div>
+
+    <!--Ürün 15 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Ayakkabı.jpg" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Spor Ayakkabı</h6>
+          <p class="price">1500,00 TL</p>
+          <p class="rating">★★★★☆ (80)</p>
+          <span class="badge bg-danger">Sepette %15 İndirim</span>
+        </div>
+      </div>
+    </div> 
+    <!-- Ürün 16 -->
+    <div class="col-md-3">
+      <div class="card product-card">
+        <img src="foto/Bluz.jpg" alt="Ürün">
+        <div class="card-body">
+          <h6 class="card-title">Bluz</h6>
+          <p class="price">149,00 TL</p>
+          <p class="rating">★★★★☆ (70)</p>
+          <span class="badge bg-info">Favor
+
+            
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3">
+  <p>© 2025 Saadzone </p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
